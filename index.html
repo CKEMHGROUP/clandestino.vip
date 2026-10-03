@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Clandestino</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: sans-serif; background: #060d1a; color: #e2e8f0; }
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center px-4">
+
+    <div class="w-full max-w-xs text-center">
+        <h1 class="text-2xl font-bold mb-2">CLANDESTINO</h1>
+        <p class="text-xs text-slate-400 mb-6 uppercase tracking-widest">Portal Access</p>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
+            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Access Code</label>
+            <input id="code-input" type="password" placeholder="••••••••"
+                   class="w-full text-center text-lg bg-slate-950 border border-slate-800 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-cyan-400 mb-4"
+                   onkeydown="if(event.key==='Enter') checkCode()">
+
+            <button id="enter-btn" onclick="checkCode()"
+                    class="w-full bg-cyan-400 text-slate-950 font-bold py-3 rounded-xl hover:bg-cyan-300 transition">
+                Enter
+            </button>
+
+            <p id="error-message" class="hidden text-xs text-red-400 mt-4"></p>
+        </div>
+    </div>
+
+    <script>
+        async function checkCode() {
+            const input = document.getElementById('code-input');
+            const err = document.getElementById('error-message');
+            const btn = document.getElementById('enter-btn');
+            const code = (input?.value || '').trim();
+
+            if (!code) return;
+
+            btn.textContent = 'Verifying…';
+            btn.disabled = true;
+            err.classList.add('hidden');
+
+            try {
+                const response = await fetch('/login/auth', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ code })
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.redirectUrl) {
+                    window.location.href = data.redirectUrl;
+                } else {
+                    err.textContent = data.error || 'Invalid access code';
+                    err.classList.remove('hidden');
+                    input.value = '';
+                }
+            } catch (e) {
+                err.textContent = 'Connection error — try again';
+                err.classList.remove('hidden');
+            } finally {
+                btn.textContent = 'Enter';
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
