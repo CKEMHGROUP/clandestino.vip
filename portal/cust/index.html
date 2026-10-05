@@ -26,27 +26,36 @@ h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;margin:0}
 .ghost{background:transparent;border:1px solid rgba(236,230,216,.28);color:var(--ink)}.ghost:hover{border-color:var(--gold);color:var(--gold)}
 .tile{background:var(--raise);border:1px solid rgba(236,230,216,.1);border-radius:20px}.tile:hover{border-color:rgba(197,160,89,.5)}
 .pill{display:inline-block;padding:8px 16px;border-radius:999px;border:1px solid rgba(197,160,89,.35);font-size:14px;color:#d3cec2}
-.fld{width:100%;min-height:56px;padding:14px 18px;background:var(--bg);border:1px solid rgba(236,230,216,.16);border-radius:12px;color:var(--ink);font:400 16px 'Hanken Grotesk',sans-serif;-webkit-appearance:none}
-.fld:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(197,160,89,.2)}
+.fld{width:100%;min-height:44px;padding:10px 14px;background:var(--bg);border:1px solid rgba(236,230,216,.16);border-radius:8px;color:var(--ink);font:400 14px 'Hanken Grotesk',sans-serif;-webkit-appearance:none}
+.fld:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 2px rgba(197,160,89,.2)}
 .idx{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid var(--line);color:var(--ink);font:500 19px 'Bricolage Grotesque',sans-serif}.idx:hover{color:var(--gold)}
 .grid{display:grid;gap:20px}
 .big{font:700 clamp(32px,5vw,64px)/1.03 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em}
 .sm{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
-label{display:block;font-size:14px;font-weight:500;color:#c9c4b8;margin-bottom:10px}
+label{display:block;font-size:13px;font-weight:500;color:#c9c4b8;margin-bottom:6px}
 .err{color:#e8a68f;font-size:14px;line-height:1.6}
 .hidden{display:none!important}
+
+/* Radio Dot Custom Styling */
+.radio-group{display:inline-flex;align-items:center;gap:16px;margin-left:12px}
+.radio-label{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--ink);cursor:pointer;margin:0}
+.radio-label input[type="radio"]{accent-color:var(--gold);width:14px;height:14px;cursor:pointer;margin:0}
 
 /* Header & Logo styling */
 .brand-header{display:flex;align-items:center}
 .brand-logo-header{height:84px;width:auto;object-fit:contain;display:block}
 .brand-logo-footer{height:53px;width:auto;object-fit:contain;display:block;margin-bottom:20px}
 
+/* Discrete Ghost Button Variant for Footer Form */
+.btn-discrete{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 24px;border-radius:8px;background:transparent;border:1px solid rgba(236,230,216,.2);color:var(--ink);font:500 13px 'Hanken Grotesk',sans-serif;cursor:pointer;transition:all .2s ease}
+.btn-discrete:hover{border-color:var(--gold);color:var(--gold);background:rgba(197,160,89,.05)}
+
 /* Modal Overlay Styling */
 .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(7,8,10,.85);backdrop-filter:blur(8px);z-index:999;display:flex;align-items:center;justify-content:center;padding:20px}
 .modal-card{background:var(--raise);border:1px solid rgba(236,230,216,.15);border-radius:20px;max-width:700px;width:100%;max-height:85vh;overflow-y:auto;padding:40px;position:relative}
 .modal-close{position:absolute;top:20px;right:24px;background:none;border:none;color:var(--ink);font-size:24px;cursor:pointer}
 
-/* Responsive Mobile & Tablet Adjustments */
+/* Responsive Mobile Adjustments */
 @media (max-width:768px){
 .wrap{padding:0 20px}
 header{padding:20px 0!important}
@@ -64,7 +73,7 @@ footer{padding:40px 20px 60px!important}
 <body>
 
 <div class="public">
-<div style="background:var(--raise);border-bottom:1px solid rgba(236,230,216,.08);padding:12px 20px;display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:center" class="sm"><span>PEERS</span><span style="color:#c9c4b8">McKinsey &amp; Company</span><span style="color:#c9c4b8">Henley &amp; Partners</span><span style="color:#c9c4b8">Rothschild &amp; Co</span></div>
+<div style="background:var(--raise);border-bottom:1px solid rgba(236,230,216,.08);padding:12px 20px;display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:center" class="sm"><span>EXECUTIVE FOCUS</span><span style="color:#c9c4b8">Corporate Architecture</span><span style="color:#c9c4b8">Operational Strategy</span><span style="color:#c9c4b8">Founder Alignment</span></div>
 </div>
 
 <div class="wrap">
@@ -72,9 +81,7 @@ footer{padding:40px 20px 60px!important}
 <div class="brand-header">
   <img class="brand-logo-header" src="https://res.cloudinary.com/djzg1ulup/image/upload/v1791127349/CB_LOGO_fkcswa.webp" alt="CB Logo">
 </div>
-<a class="btn" href="#engage">Applicant access&nbsp;</a>
-
-</a>
+<a class="btn" href="#engage">Associate access&nbsp;</a>
 </header>
 
 
@@ -83,16 +90,13 @@ footer{padding:40px 20px 60px!important}
 <section style="padding:88px 0 112px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px 80px;align-items:end">
 <div>
 <span class="pill" style="margin-bottom:28px;color:var(--gold)">For next-generation principals</span>
-<h1 style="font:700 clamp(40px,7vw,100px)/.98 'Bricolage Grotesque',sans-serif;letter-spacing:-.035em">Architecting Wealth, <span style="color:var(--gold)">Strategic Legacy</span> &amp; Human Mastery.</h1>
+<h1 style="font:700 clamp(40px,7vw,100px)/.98 'Bricolage Grotesque',sans-serif;letter-spacing:-.035em">Architecting Strategy, <span style="color:var(--gold)">Corporate Legacy</span> &amp; Executive Mastery.</h1>
 </div>
 <div>
-<p class="hero-p" style="font-size:21px;line-height:1.6;color:#c9c4b8;margin:0 0 40px;max-width:480px;font-style:italic">Build the structure. Protect what you've built. Become the person who can carry both. Private advisory for people who move fast and plan in generations.</p>
-<div style="display:flex;flex-wrap:wrap;gap:12px">
-  
-</div>
-<div style="margin-top:28px" class="sm">New clients by referral only</div>
+<p class="hero-p" style="font-size:21px;line-height:1.6;color:#c9c4b8;margin:0 0 40px;max-width:480px;font-style:italic">Build the structure. Expand your reach. Become the principal who can command both. Strategic advisory and peer networking for operators who move fast and plan in generations.</p>
+<div style="margin-top:28px" class="sm">New associates by introduction only</div>
 <div style="margin-top:48px;border-top:1px solid var(--line)">
-<a class="idx" href="#pillars"><span>Wealth &amp; Asset Architecture</span><span style="color:var(--gold)">01</span></a>
+<a class="idx" href="#pillars"><span>Corporate Ecosystem &amp; Strategy</span><span style="color:var(--gold)">01</span></a>
 <a class="idx" href="#pillars"><span>Strategic Business Growth</span><span style="color:var(--gold)">02</span></a>
 <a class="idx" href="#pillars"><span>Personal Mastery &amp; Vision</span><span style="color:var(--gold)">03</span></a>
 </div>
@@ -100,36 +104,52 @@ footer{padding:40px 20px 60px!important}
 </section>
 
 <section class="grid" style="padding:80px 0;border-top:1px solid rgba(236,230,216,.1);grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px 56px">
-<div style="font:700 clamp(28px,4vw,52px)/1.05 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em">Own your structure.</div>
-<div style="font:700 clamp(28px,4vw,52px)/1.05 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em">Protect your future.</div>
-<div style="font:700 clamp(28px,4vw,52px)/1.05 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em;color:var(--gold)">Become who it requires.</div>
-</section>
-
-<section style="padding:88px 0 0;border-top:1px solid rgba(236,230,216,.1)">
-<div class="eyebrow">Peer alignment</div>
-<h2 class="big" style="margin-bottom:20px;max-width:860px">The old guard advises on one thing. You're building across all of it.</h2>
-<p style="font-size:18px;color:#9d998d;max-width:560px;margin:0 0 48px">Our mandate mapped against the established authority in each discipline, integrated into one conversation.</p>
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
-<div class="tile" style="padding:36px"><div class="eyebrow" style="font-size:13px;margin-bottom:24px">EXAMPLE HENLEY &amp; PARTNERS</div><div style="font:600 26px/1.15 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;margin-bottom:14px">Residence &amp; sovereignty</div><p style="margin:0;color:var(--body)">Cross-border residence and sovereign navigation, tied to your entity and estate plan rather than sold in isolation.</p></div>
-<div class="tile" style="padding:36px"><div class="eyebrow" style="font-size:13px;margin-bottom:24px">EXAMPLES ROTHSCHILD &amp; CO</div><div style="font:600 26px/1.15 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;margin-bottom:14px">Asset governance</div><p style="margin:0;color:var(--body)">Entity design, asset protection and multi-generational estate alignment under a single governing view.</p></div>
-<div class="tile" style="padding:36px"><div class="eyebrow" style="font-size:13px;margin-bottom:24px">EXAMPLE MCKINSEY &amp; COMPANY</div><div style="font:600 26px/1.15 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;margin-bottom:14px">Enterprise growth</div><p style="margin:0;color:var(--body)">Operational scaling and regulatory navigation for founder-led companies operating across jurisdictions.</p></div>
-</div>
+<div style="font:700 clamp(28px,4vw,52px)/1.05 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em">Optimize your structure.</div>
+<div style="font:700 clamp(28px,4vw,52px)/1.05 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em">Scale your expansion.</div>
+<div style="font:700 clamp(28px,4vw,52px)/1.05 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em;color:var(--gold)">Master your leadership.</div>
 </section>
 
 <section id="pillars" style="padding:96px 0 0">
 <div class="eyebrow">Three pillars</div>
-<h2 class="big" style="margin-bottom:48px;max-width:760px">One system. Three levers.</h2>
+<h2 class="big" style="margin-bottom:48px;max-width:760px">One framework. Three strategic levers.</h2>
 <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
-<div class="tile" style="padding:36px"><div style="font:700 15px 'Bricolage Grotesque',sans-serif;color:var(--gold);margin-bottom:36px">01</div><h3 style="font-size:30px;line-height:1.1;letter-spacing:-.025em;margin-bottom:16px">Wealth &amp; Asset Architecture</h3><p style="color:var(--body);margin:0 0 28px">Structure that holds under pressure, across borders and across generations.</p><div style="display:flex;flex-wrap:wrap;gap:10px"><span class="pill">Cross-border entity design</span><span class="pill">Asset protection</span><span class="pill">Multi-generational estate alignment</span></div></div>
-<div class="tile" style="padding:36px"><div style="font:700 15px 'Bricolage Grotesque',sans-serif;color:var(--gold);margin-bottom:36px">02</div><h3 style="font-size:30px;line-height:1.1;letter-spacing:-.025em;margin-bottom:16px">Strategic Business Growth</h3><p style="color:var(--body);margin:0 0 28px">Scale the company without losing control of the jurisdiction it sits in.</p><div style="display:flex;flex-wrap:wrap;gap:10px"><span class="pill">Operational scaling</span><span class="pill">Global mobility</span><span class="pill">Sovereign &amp; regulatory navigation</span></div></div>
-<div class="tile" style="padding:36px"><div style="font:700 15px 'Bricolage Grotesque',sans-serif;color:var(--gold);margin-bottom:36px">03</div><h3 style="font-size:30px;line-height:1.1;letter-spacing:-.025em;margin-bottom:16px">Personal Mastery &amp; Vision</h3><p style="color:var(--body);margin:0 0 28px">The structure is only as strong as the person running it.</p><div style="display:flex;flex-wrap:wrap;gap:10px"><span class="pill">Executive mental performance</span><span class="pill">Founder alignment</span><span class="pill">Private peer network</span></div></div>
+<div class="tile" style="padding:36px">
+  <div style="font:700 15px 'Bricolage Grotesque',sans-serif;color:var(--gold);margin-bottom:36px">01</div>
+  <h3 style="font-size:30px;line-height:1.1;letter-spacing:-.025em;margin-bottom:16px">Corporate Ecosystem &amp; Operational Strategy</h3>
+  <p style="color:var(--body);margin:0 0 28px">Helping founders evaluate global markets, identify expansion choke-points, and organize their operational footprint. We provide high-level strategic blueprints.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    <span class="pill">Operational Blueprinting</span>
+    <span class="pill">Global Market Mapping</span>
+    <span class="pill">Structural Efficiency</span>
+  </div>
+</div>
+<div class="tile" style="padding:36px">
+  <div style="font:700 15px 'Bricolage Grotesque',sans-serif;color:var(--gold);margin-bottom:36px">02</div>
+  <h3 style="font-size:30px;line-height:1.1;letter-spacing:-.025em;margin-bottom:16px">Strategic Business Growth</h3>
+  <p style="color:var(--body);margin:0 0 28px">Scale your enterprise without sacrificing operational clarity across expanding operational regions.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    <span class="pill">Operational Scaling</span>
+    <span class="pill">Global Leadership</span>
+    <span class="pill">Market Navigation</span>
+  </div>
+</div>
+<div class="tile" style="padding:36px">
+  <div style="font:700 15px 'Bricolage Grotesque',sans-serif;color:var(--gold);margin-bottom:36px">03</div>
+  <h3 style="font-size:30px;line-height:1.1;letter-spacing:-.025em;margin-bottom:16px">Personal Mastery &amp; Vision</h3>
+  <p style="color:var(--body);margin:0 0 28px">The organization is only as strong as the leader running it. High-performance mindset and executive calibration.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    <span class="pill">Executive Performance</span>
+    <span class="pill">Founder Alignment</span>
+    <span class="pill">Private Peer Network</span>
+  </div>
+</div>
 </div>
 </section>
 
 <section style="padding:96px 0 0">
 <div style="border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:48px 0;display:flex;flex-wrap:wrap;gap:24px 60px;align-items:flex-start">
 <div class="eyebrow" style="flex:1 1 200px;padding-top:6px;margin:0">Who we work with</div>
-<p style="flex:3 1 320px;margin:0;font:600 clamp(22px,2.8vw,38px)/1.28 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em">By introduction only. Individuals with a minimum of <span style="color:var(--gold)">USD 250K</span> or equivalent in investable capital, introduced by a former client.</p>
+<p style="flex:3 1 320px;margin:0;font:600 clamp(22px,2.8vw,38px)/1.28 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em">By introduction only. Seven- and eight-figure founders, cross-border operators, and next-generation principals introduced exclusively by a private member.</p>
 </div>
 </section>
 
@@ -138,24 +158,24 @@ footer{padding:40px 20px 60px!important}
 <div>
 <div class="eyebrow">Referral-only access</div>
 <h2 style="font-size:clamp(36px,5.4vw,72px);line-height:1;letter-spacing:-.035em;margin-bottom:28px">Not open to the public. <span style="color:var(--gold)">By introduction.</span></h2>
-<p style="font-size:18px;color:#c9c4b8;margin:0 0 32px;max-width:480px">Access is limited and every contact is evaluated. This page is shared only with introduced candidates.</p>
+<p style="font-size:18px;color:#c9c4b8;margin:0 0 32px;max-width:480px">Access is limited and every associate is evaluated. This portal is shared only with introduced candidates.</p>
 <div style="border-top:1px solid var(--line);margin:0 0 32px;max-width:520px">
-<div style="display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)"><span style="font:700 15px 'Bricolage Grotesque';color:var(--gold);min-width:28px;padding-top:4px">01</span><div><div style="font:600 18px 'Bricolage Grotesque';margin-bottom:4px">Introduction</div><div style="font-size:15px;color:var(--body)">A former client introduces you. You make first contact by email.</div></div></div>
-<div style="display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)"><span style="font:700 15px 'Bricolage Grotesque';color:var(--gold);min-width:28px;padding-top:4px">02</span><div><div style="font:600 18px 'Bricolage Grotesque';margin-bottom:4px">Questionnaire</div><div style="font-size:15px;color:var(--body)">We reply with a questionnaire, a link to this page and your personal token.</div></div></div>
-<div style="display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)"><span style="font:700 15px 'Bricolage Grotesque';color:var(--gold);min-width:28px;padding-top:4px">03</span><div><div style="font:600 18px 'Bricolage Grotesque';margin-bottom:4px">Evaluation</div><div style="font-size:15px;color:var(--body)">Each profile is evaluated individually, including standard due diligence. Your token opens your profile and keeps it on file.</div></div></div>
+<div style="display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)"><span style="font:700 15px 'Bricolage Grotesque';color:var(--gold);min-width:28px;padding-top:4px">01</span><div><div style="font:600 18px 'Bricolage Grotesque';margin-bottom:4px">Introduction</div><div style="font-size:15px;color:var(--body)">A current member introduces you. You make initial contact.</div></div></div>
+<div style="display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)"><span style="font:700 15px 'Bricolage Grotesque';color:var(--gold);min-width:28px;padding-top:4px">02</span><div><div style="font:600 18px 'Bricolage Grotesque';margin-bottom:4px">Questionnaire</div><div style="font-size:15px;color:var(--body)">We reply with a brief questionnaire and your personal access token.</div></div></div>
+<div style="display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)"><span style="font:700 15px 'Bricolage Grotesque';color:var(--gold);min-width:28px;padding-top:4px">03</span><div><div style="font:600 18px 'Bricolage Grotesque';margin-bottom:4px">Evaluation</div><div style="font-size:15px;color:var(--body)">Each candidate profile is reviewed individually. Your token unlocks member resources.</div></div></div>
 </div>
-<div style="padding:20px 24px;border:1px solid rgba(197,160,89,.3);border-radius:16px;font-size:14px;color:var(--body);max-width:520px"><span style="color:var(--gold);font-weight:600">Please allow time.</span> Demand is high, every inquiry is evaluated individually, and a considered answer takes patience.</div>
+<div style="padding:20px 24px;border:1px solid rgba(197,160,89,.3);border-radius:16px;font-size:14px;color:var(--body);max-width:520px"><span style="color:var(--gold);font-weight:600">Please allow time.</span> Inquiries are reviewed periodically and considered feedback takes patience.</div>
 </div>
 <div class="tile" style="padding:40px 32px">
-<div class="eyebrow" style="margin-bottom:16px">Applicant access</div>
+<div class="eyebrow" style="margin-bottom:16px">Associate access</div>
 <h3 style="font-size:28px;line-height:1.1;letter-spacing:-.025em;margin-bottom:28px">Enter your token</h3>
 <form id="login" novalidate>
 <div style="margin-bottom:24px"><label for="code-input">Access token</label><input class="fld" id="code-input" type="password" placeholder="••••••••" autocomplete="off" spellcheck="false"></div>
 <p id="error-message" class="err hidden" role="alert" style="margin:-8px 0 20px"></p>
 <button class="btn" id="enter-btn" type="submit" style="width:100%">Enter</button>
 </form>
-<p style="margin:20px 0 0;font-size:13px;color:var(--mut)">Issued with your questionnaire. No token yet? Introductions are made by email through a former client. Access does not create an advisory relationship.</p>
-<div class="sm" style="margin-top:24px;padding-top:20px;border-top:1px solid rgba(236,230,216,.1)">Strict NDA · Principal to principal · No institutional conflicts</div>
+<p style="margin:20px 0 0;font-size:13px;color:var(--mut)">Issued with your associate link. No token yet? Introductions are made via current network members. Access does not constitute a client engagement.</p>
+<div class="sm" style="margin-top:24px;padding-top:20px;border-top:1px solid rgba(236,230,216,.1)">Strict NDA · Peer to peer · Non-commercial network</div>
 </div>
 </div>
 </section>
@@ -163,22 +183,109 @@ footer{padding:40px 20px 60px!important}
 </div>
 
 <footer style="border-top:1px solid rgba(236,230,216,.1);padding:48px 32px 64px">
-<div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px 60px">
-<!-- Left Column: Philosophy -->
+<div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px 60px;align-items:start">
+
+<!-- Left Column: Compact Contact Form -->
 <div>
-  <div style="font-size:13px;color:var(--body);line-height:1.7;max-width:380px">
-    <span style="color:var(--gold);font-weight:600;display:block;margin-bottom:6px">Sovereign Mindset &amp; Governance</span>
-    Operating as a private single-family alliance focused on generational independence, sovereign mobility, and private asset architecture. Built by principals, for principals.
+  <div style="display:flex;align-items:center;margin-bottom:16px">
+    <span style="font-size:13px;font-weight:500;color:var(--ink)">Title*</span>
+    <div class="radio-group">
+      <label class="radio-label"><input type="radio" name="title" value="Ms." required checked> Ms.</label>
+      <label class="radio-label"><input type="radio" name="title" value="Mr."> Mr.</label>
+      <label class="radio-label"><input type="radio" name="title" value="Dr."> Dr.</label>
+    </div>
   </div>
+  
+  <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:12px">
+    <!-- Web3Forms Access Key Header -->
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+    <input type="hidden" name="subject" value="New Associate Inquiry - Mr. Charly Brown">
+    <input type="hidden" name="from_name" value="Footer Inquiry Form">
+    <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+
+    <!-- First Name & Last Name -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div>
+        <label for="first-name">First name*</label>
+        <input class="fld" id="first-name" name="first_name" type="text" placeholder="First name" required>
+      </div>
+      <div>
+        <label for="last-name">Last name*</label>
+        <input class="fld" id="last-name" name="last_name" type="text" placeholder="Last name" required>
+      </div>
+    </div>
+
+    <!-- Phone & Email -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div>
+        <label for="phone">Telephone</label>
+        <input class="fld" id="phone" name="phone" type="tel" placeholder="+1 201-555-0123">
+      </div>
+      <div>
+        <label for="email">E-mail address*</label>
+        <input class="fld" id="email" name="email" type="email" placeholder="E-mail address" required>
+      </div>
+    </div>
+
+    <!-- Nationality & Residence -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div>
+        <label for="nationality">Nationality*</label>
+        <select class="fld" id="nationality" name="nationality" required style="cursor:pointer">
+          <option value="" disabled selected>Select</option>
+          <option value="United States">United States</option>
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="Switzerland">Switzerland</option>
+          <option value="United Arab Emirates">United Arab Emirates</option>
+          <option value="Germany">Germany</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="residence">Residence*</label>
+        <select class="fld" id="residence" name="country_residence" required style="cursor:pointer">
+          <option value="" disabled selected>Select</option>
+          <option value="United States">United States</option>
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="Switzerland">Switzerland</option>
+          <option value="United Arab Emirates">United Arab Emirates</option>
+          <option value="Germany">Germany</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Message Field (Max 500 chars) -->
+    <div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+        <label for="message" style="margin:0">I have a specific question</label>
+        <span id="char-count" style="font-size:11px;color:var(--mut)">0 / 500</span>
+      </div>
+      <textarea class="fld" id="message" name="message" maxlength="500" rows="3" placeholder="Write your message or question here..." style="resize:none;min-height:72px;padding:10px 14px"></textarea>
+    </div>
+
+    <!-- Consent & Submit Button -->
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:4px">
+      <div style="display:flex;align-items:flex-start;gap:8px">
+        <input type="checkbox" id="consent" name="consent" style="margin-top:3px;accent-color:var(--gold);width:14px;height:14px;cursor:pointer">
+        <label for="consent" style="font-size:11px;line-height:1.4;color:var(--mut);margin:0">
+          Keep me updated via email. <a href="javascript:void(0)" onclick="openModal('privacy-modal')">Privacy Policy</a>
+        </label>
+      </div>
+      <button type="submit" class="btn-discrete" id="contact-btn">Transmit</button>
+    </div>
+    
+    <p id="contact-status" class="sm hidden" style="text-align:right;margin-top:4px;font-size:11px"></p>
+  </form>
 </div>
 
-<!-- Right Column: Footer Logo & Legal Disclaimer -->
+<!-- Right Column: Logo & Mandatory Non-Reliance Disclaimer -->
 <div style="font-size:12px;line-height:1.85;color:var(--mut)">
 <img class="brand-logo-footer" src="https://res.cloudinary.com/djzg1ulup/image/upload/v1791127349/CB_LOGO_fkcswa.webp" alt="CB Logo">
-<p style="margin:0 0 14px">Mr.Charly Brown .private affairs, a private family office providing strategic advisory and consulting services. Nothing on this site constitutes legal, tax, accounting, investment or immigration advice, or an offer or solicitation of securities or financial products. Access is by introduction only and subject to individual evaluation and due diligence. Engagements are scoped in writing; obtain independent professional advice in each relevant jurisdiction.</p>
-<p style="margin:0 0 14px">McKinsey &amp; Company, Henley &amp; Partners and Rothschild &amp; Co are named solely to describe the disciplines in which they are recognized. Mr. Charly Brown .Private Affairs is not affiliated with, endorsed by, or acting on behalf of any of them; their names belong to their respective owners.</p>
-<p style="margin:0">Private Family Office © MMXXVI &nbsp;·&nbsp; <a href="javascript:void(0)" onclick="openModal('privacy-modal')">Privacy</a> &nbsp;·&nbsp; <a href="javascript:void(0)" onclick="openModal('terms-modal')">Terms</a></p>
+<p style="margin:0 0 14px"><strong>Disclaimer:</strong> Mr. Charly Brown .Private Affairs is a private, non-commercial informational repository and peer network for close corporate associates. The platform does not provide, arrange, or execute regulated financial services, investment advice, legal counsel, tax optimization, or immigration placement. All macro-economic concepts presented are for educational study only. Members must retain independent, qualified, and licensed professional attorneys and fiduciaries in each relevant jurisdiction before executing any structural changes.</p>
+<p style="margin:0">Private Peer Network © MMXXVI &nbsp;·&nbsp; <a href="javascript:void(0)" onclick="openModal('privacy-modal')">Privacy</a> &nbsp;·&nbsp; <a href="javascript:void(0)" onclick="openModal('terms-modal')">Terms</a></p>
 </div>
+
 </div>
 </footer>
 
@@ -191,9 +298,9 @@ footer{padding:40px 20px 60px!important}
     <div style="font-size:14px;color:var(--body);line-height:1.7">
       <p>MR. CHARLY BROWN .Private Affairs operates strictly under a zero-telemetry policy for public web visitors. We do not place tracking cookies, run cross-site scripts, or collect analytics on unauthenticated browsing activity.</p>
       <h3 style="color:var(--ink);font-size:16px;margin:20px 0 8px">1. Introduced Candidate Data</h3>
-      <p>Tokens provided to introduced candidates serve exclusively to authenticate single-session access to private profiles. Access logging is maintained purely for access control and due diligence verification.</p>
+      <p>Tokens provided to introduced associates serve exclusively to authenticate single-session access to private repository resources. Access logging is maintained purely for internal security and access control.</p>
       <h3 style="color:var(--ink);font-size:16px;margin:20px 0 8px">2. Confidentiality & Storage</h3>
-      <p>All engagement data and questionnaire submissions remain strictly private under non-disclosure protocols. Information is never shared, sold, or transferred to third-party marketing entities.</p>
+      <p>All correspondence and candidate submissions remain strictly confidential under non-disclosure protocols. Information is never shared, sold, or transferred to third parties.</p>
     </div>
   </div>
 </div>
@@ -202,14 +309,16 @@ footer{padding:40px 20px 60px!important}
 <div id="terms-modal" class="modal-overlay hidden">
   <div class="modal-card">
     <button class="modal-close" onclick="closeModal('terms-modal')">&times;</button>
-    <div class="eyebrow">Private Mandate</div>
+    <div class="eyebrow">Private Network</div>
     <h2 style="font-size:28px;margin-bottom:20px;color:var(--gold)">Terms of Engagement</h2>
     <div style="font-size:14px;color:var(--body);line-height:1.7">
-      <p>By accessing this site or utilizing an introduced access token, you acknowledge and accept the following terms:</p>
-      <h3 style="color:var(--ink);font-size:16px;margin:20px 0 8px">1. Non-Solicitation & Non-Advisory Notice</h3>
-      <p>This web interface serves informational purposes for introduced candidates. Content on this website does not constitute an offer, legal counsel, tax advisory, or regulated investment advice. Formal advisory commitments exist solely upon execution of a written agreement.</p>
-      <h3 style="color:var(--ink);font-size:16px;margin:20px 0 8px">2. Evaluation & Access Rights</h3>
-      <p>Access tokens are non-transferable and issued solely to specific introduced principals. We reserve the absolute right to revoke token access or decline engagement inquiries at our sole discretion during due diligence.</p>
+      <p>By accessing this repository or utilizing an associate access token, you acknowledge and agree to the following terms:</p>
+      <h3 style="color:var(--ink);font-size:16px;margin:20px 0 8px">1. Non-Commercial & Informational Purpose</h3>
+      <p>This private platform is exclusively an informational repository and peer network for close associates exploring macro-economic concepts, corporate operational frameworks, and founder alignment strategies. The platform operator is not a licensed financial advisor, attorney, tax practitioner, or fiduciary.</p>
+      <h3 style="color:var(--ink);font-size:16px;margin:20px 0 8px">2. Requirement for Independent Counsel</h3>
+      <p>No information hosted on this portal constitutes regulated legal, financial, tax, or investment advice. Associates must engage independent, licensed, and qualified professional advisers in their respective jurisdictions prior to taking any corporate or financial actions.</p>
+      <h3 style="color:var(--ink);font-size:16px;margin:20px 0 8px">3. Token Access & Revocation</h3>
+      <p>Access tokens are strictly non-transferable and issued solely to verified network associates. We reserve the right to revoke repository access at any time at our sole discretion.</p>
     </div>
   </div>
 </div>
@@ -263,6 +372,52 @@ function closeModal(id) {
 }
 
 document.getElementById('login').addEventListener('submit', (e) => { e.preventDefault(); checkCode(); });
+
+/* Live Character Counter for Textarea */
+const msgArea = document.getElementById('message');
+const charCount = document.getElementById('char-count');
+msgArea?.addEventListener('input', function() {
+  const len = this.value.length;
+  charCount.textContent = `${len} / 500`;
+});
+
+/* Discrete Contact Form AJAX Handler */
+document.getElementById('contact-form')?.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = document.getElementById('contact-btn');
+  const status = document.getElementById('contact-status');
+
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  status.classList.add('hidden');
+
+  try {
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      status.style.color = 'var(--gold)';
+      status.textContent = 'Inquiry transmitted successfully.';
+      status.classList.remove('hidden');
+      form.reset();
+      if (charCount) charCount.textContent = '0 / 500';
+    } else {
+      throw new Error('Submission failed');
+    }
+  } catch (err) {
+    status.style.color = '#e8a68f';
+    status.textContent = 'Error sending message.';
+    status.classList.remove('hidden');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Transmit';
+  }
+});
 </script>
 </body>
 </html>
