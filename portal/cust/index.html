@@ -303,7 +303,7 @@ section{padding:56px 0}.purpose{padding:40px 0}
 
 <script>
 /* Paste your Cloudinary URLs here; empty entries stay hidden. */
-const ASSETS={logo:'https://res.cloudinary.com/djzg1ulup/image/upload/v1791282591/CB_LOGO_fkcswa.webp',wappen:'https://res.cloudinary.com/djzg1ulup/image/upload/v1791272902/06_npfk2d.webp'};
+const ASSETS={logo:'https://res.cloudinary.com/djzg1ulup/image/upload/v1791282591/CB_LOGO_fkcswa.webp',wappen:'https://res.cloudinary.com/djzg1ulup/image/upload/v1791282537/wappen_yo6zex.webp'};
 document.querySelectorAll('[data-asset]').forEach(i=>{const u=ASSETS[i.dataset.asset];if(!u)return;
   i.addEventListener('load',()=>{i.hidden=false;if(i.dataset.asset==='logo'){const b=document.querySelector('.bt');if(b)b.hidden=true}});
   i.addEventListener('error',()=>{i.hidden=true});i.src=u;});
@@ -318,7 +318,7 @@ const IMAGES={
   worker:'https://res.cloudinary.com/djzg1ulup/image/upload/v1791272902/A02_e8e1c1.webp',    // mural, worker lifting a bobbin (tall)
   siblings:'https://res.cloudinary.com/djzg1ulup/image/upload/v1791272901/03_roklsp.webp',  // children with the woman
   toddler:'https://res.cloudinary.com/djzg1ulup/image/upload/v1791272901/05_anzlmb.webp',   // toddler portrait
-  portrait:'https://res.cloudinary.com/djzg1ulup/image/upload/v1791282537/wappen_yo6zex.webp'   // present generation portrait
+  portrait:''   // present generation portrait
 };
 document.querySelectorAll('[data-img]').forEach(i=>{const u=IMAGES[i.dataset.img];if(!u)return;const f=i.src;i.addEventListener('error',()=>{i.src=f},{once:true});i.src=u;});
 
